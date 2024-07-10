@@ -181,8 +181,7 @@ fun s:set_props()
         let b:comment_char = "*"
         let b:block_comment = 1
     " ----------------------------------
-    elseif b:filetype == 'html' ||
-           \ b:filetype == 'vue'
+    elseif b:filetype == 'html'
         let b:first_line = '<!DOCTYPE html>'
         let b:first_line_pattern = '<!DOCTYPE\s* html>'
         let b:block_comment = 1
@@ -190,7 +189,8 @@ fun s:set_props()
         let b:comment_begin = '<!--'
         let b:comment_end = '-->'
     " ----------------------------------
-    elseif b:filetype == 'svelte'
+    elseif b:filetype == 'svelte' ||
+            \ b:filetype == 'vue'
         let b:block_comment = 1
         let b:comment_char = ' -'
         let b:comment_begin = '<!--'
