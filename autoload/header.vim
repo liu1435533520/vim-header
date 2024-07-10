@@ -92,7 +92,6 @@ fun s:set_props()
         \ b:filetype == 'javascriptreact' ||
         \ b:filetype == 'typescript' ||
         \ b:filetype == 'typescriptreact' ||
-        \ b:filetype == 'vue' ||
         \ b:filetype == 'less' ||
         \ b:filetype == 'php' ||
         \ b:filetype == 'go' ||
@@ -182,7 +181,8 @@ fun s:set_props()
         let b:comment_char = "*"
         let b:block_comment = 1
     " ----------------------------------
-    elseif b:filetype == 'html'
+    elseif b:filetype == 'html' ||
+           \ b:filetype == 'vue'
         let b:first_line = '<!DOCTYPE html>'
         let b:first_line_pattern = '<!DOCTYPE\s* html>'
         let b:block_comment = 1
@@ -278,7 +278,6 @@ fun s:set_props()
         \ b:filetype == 'javascriptreact' ||
         \ b:filetype == 'typescript' ||
         \ b:filetype == 'typescriptreact' ||
-        \ b:filetype == 'vue'
 
         let b:min_comment_begin = '/*!'
         let b:field_file = '@file'
