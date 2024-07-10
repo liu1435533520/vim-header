@@ -92,6 +92,7 @@ fun s:set_props()
         \ b:filetype == 'javascriptreact' ||
         \ b:filetype == 'typescript' ||
         \ b:filetype == 'typescriptreact' ||
+        \ b:filetype == 'vue' ||
         \ b:filetype == 'less' ||
         \ b:filetype == 'php' ||
         \ b:filetype == 'go' ||
